@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Esta es mi pagina web!</title>
+</head>
+<style>
+    .hidtext {
+        color: white;
+        position: relative;
+        top: 100%;
+        right: 50%;
+    }
+</style>
+<style>
+    .alltext {
+        text-align: center; max-width: 50%; margin: auto 
+    }
+</style>
+<style>
+    table, tr, td{
+        text-align: center; max-width: 50%; margin: auto;
+        border: 1px solid black
+    }
+</style>
+<body class="alltext">
+    <h1><b >Laboratorio 1</b></h1>
+    <h2>Alan Fischer</h2>
+    <h2>Ingeniería Civil en Ciencias de la Computación.</h2>
+    <h2>2020</h2>
+    <h2><a href="https://github.com/AlmaFischer/almafischer.github.io">Link to my github</a></h2>
+    <h3><p style="font-family:verdana; color:red">Soy un estudiante de ignenieria civil en la universidad de los andes, me gusta jugar voleyball y participoen la seleccion de la universidad, tambien me gustan mucho los videojuegos.<p></h3>
+    <table>
+        <tr>
+            <td>Python</td>
+            <td>Expert</td>   
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td>Basic</td>
+        </tr>
+        <tr>
+            <td>HTML/CSS</td>
+            <td>Basic</td>
+        </tr>
+        <tr>
+            <td>Git</td>
+            <td>Hub</td> 
+        </tr>
+        <tr>
+            <td>Excel</td>
+            <td>God</td>
+        </tr>
+        <tr>
+            <td>SQL</td>
+            <td>Aceptable</td>            
+        </tr>
+        <tr>
+            <td>Ruby</td>
+            <td>I dunno</td>
+        </tr>
+        <tr>
+            <td>English</td>
+            <td>Advance</td>
+        </tr>
+        <tr>
+            <td>Spanish</td>
+            <td>Native</td>
+        </tr>
+    </table>
+    <script>
+        function randomColor() {
+            var randomColor = Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = "#" + randomColor;
+        }
+    </script>
+    <script>
+        function changeColor() {
+            var color = document.getElementsByName("color")[0].value;
+            if (color) {
+                document.body.style.backgroundColor = color;
+                document.querySelector('.hidtext').innerText = "Woah! you found me! your favorite color is " + color;
+                color = "";
+            }
+        }
+    </script>
+    <p></p>
+    <form>
+        What is your favorite color?:<input type="text" name="color" /><br />
+        <button type="button" onclick="changeColor()">Send it!</button> <button type="button" onclick="randomColor()"> Random color!</button>
+    </form>
+
+    <h6 class = "hidtext">Woah! you found me! your favorite color none</h6>
+</body>
+</html>
